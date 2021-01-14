@@ -63,7 +63,10 @@
 ///////////////////////////////
 // user navigaton
 .user-nav{
+    background-color: lawngreen;
+    display: flex;
     &__icon-box{
+
 
     }
     &__icon{
@@ -80,7 +83,8 @@
     &__user-photo{
         height: 3.75rem;
         width: 3.75rem;
-        border-radius: 50%;
+        // border-radius: 50%;
+      
 
     }
 
