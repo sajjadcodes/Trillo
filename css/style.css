@@ -78,14 +78,39 @@
     fill: var(--color-primary-light); }
 
 .user-nav {
-  background-color: lawngreen;
-  display: flex; }
+  display: flex;
+  align-self: stretch; }
+  .user-nav > * {
+    padding: 0 2rem;
+    cursor: pointer;
+    height: 100%;
+    display: flex;
+    align-items: center; }
+  .user-nav > *:hover {
+    background-color: lightblue; }
+  .user-nav__icon-box {
+    position: relative; }
   .user-nav__icon {
     height: 2.5rem;
-    width: 2.5rem; }
+    width: 2.5rem;
+    fill: var(--color-Grey-dark-2); }
+  .user-nav__notification {
+    font-size: .8rem;
+    height: 1.75rem;
+    width: 1.75rem;
+    border-radius: 100px;
+    background-color: var(--color-primary);
+    position: absolute;
+    top: 0;
+    right: 1rem;
+    display: flex;
+    justify-content: center;
+    justify-items: center; }
   .user-nav__user-photo {
     height: 3.75rem;
-    width: 3.75rem; }
+    width: 3.75rem;
+    border-radius: 50%;
+    margin-right: 1.5rem; }
 
 /*
 COLORS
