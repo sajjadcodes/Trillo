@@ -299,9 +299,16 @@ align-items: center;
     background-color: transparent;
     cursor: pointer;
     transition:  all .2s;
+    & span{
+        margin-left: 3px;
+        transition:margin-left .2s;
+    }
 
     &:hover{
         color: var(--color-gray-dark-1);
+        span{
+            margin-left: 8px;
+        }
     }
     &:focus{
         outline:none;
@@ -405,19 +412,24 @@ align-items: center;
 // reivew
 
 .review{
-   
+   position: relative;
     background-color: #fff;
     box-shadow: var(--box-shadow-light);
     padding:3rem;
     margin-bottom: 3.5rem;
+    overflow: hidden;
     &__text{
         margin-bottom: 2rem;
+        z-index: 10;
+        position: relative;
 
     }
+  
     &__user{
         display: flex;
         // justify-content: space-between;
         align-items: center;
+        
 
     }
     &__photo{
@@ -438,6 +450,8 @@ align-items: center;
 
     }
     &__user-date{
+        font-size: 1rem;
+        color:var(--color-primary-dark);
 
         
     }
@@ -447,4 +461,17 @@ align-items: center;
         font-weight:300;
 
     }
+&::before{
+    content: "\201C";
+    position: absolute;
+    top:-2rem;
+    left:-1rem;
+    font-size:20rem;
+    color:var();
+    font-family: sans-serif;
+    line-height: 1;
+    z-index: 1;
+    color:var(--color-Grey-light-4);
+}
+
 }
