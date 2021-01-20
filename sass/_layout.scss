@@ -33,3 +33,30 @@
     flex:1;
     height: 80vh;
 }
+
+
+
+
+///////////////////////////////
+// review layout
+
+
+.detail{
+    font-size: 1.4rem;
+    display: flex;
+    padding: 4.5rem;
+    background-color: var(--color-Grey-light-1);
+    
+    }
+    
+    .description{
+        background-color: #fff;
+        box-shadow: var(--box-shadow-light);
+        padding:3rem;
+        flex:0 0 60%;
+        margin-right: 4.5rem;
+    }
+    .user-reviews{
+        flex:1;
+    }
+    
