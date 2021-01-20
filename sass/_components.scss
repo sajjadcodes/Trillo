@@ -217,7 +217,7 @@
 .overview{
     display: flex;
    align-items: center;
-    border-bottom: 1px solid var(--color-Grey-light-1);
+    border-bottom: var(--line);
     &__heading{
         font-size: 2.25rem;
         font-weight: 300;
@@ -325,5 +325,100 @@ align-items: center;
         transform: scale(1);
         box-shadow: none;
 
+    }
+}
+
+
+///////////////////////////////
+// review layout
+
+
+.detail{
+
+display: flex;
+padding: 4.5rem;
+background-color: var(--color-Grey-light-1);
+
+}
+
+.description{
+    background-color: #fff;
+    box-shadow: var(--box-shadow-light);
+    padding:3rem;
+    flex:0 0 60%;
+    margin-right: 4.5rem;
+}
+.user-reviews{
+    background-color: seagreen;
+    flex:1;
+}
+
+
+///////////////////////////////
+// paragraph
+
+.paragraph:not(:nth-of-type){
+    margin-bottom: 2rem;
+}
+
+///////////////////////////////
+// List
+
+.list{
+    margin: 3rem 0;
+    list-style: none;
+    padding:3rem 0;
+    border-top:var(--line);
+    border-bottom: var(--line);
+    display: flex;
+    flex-wrap: wrap;
+    &__item{
+        flex: 0 0 50%;
+        margin-bottom: .7rem;
+    }
+    &__item::before{
+        content:"";
+        // background-image: url(../img/chevron-thin-right.svg);
+        display: inline-block;
+        width: 2rem;
+        height: 2rem;
+        margin-right: .7rem;
+
+        // Newer browser -webkit-mask: 
+        background-color: var(--color-primary);
+        -webkit-mask-image: url(img/chevron-thin-right.svg);
+        -webkit-mask-size: cover;
+        mask-size: cover;
+        
+
+        
+    }
+    
+}
+
+///////////////////////////////
+// Recommend
+
+.recommend{
+
+    font-size: 1.3rem;
+    color:var(--color-Grey-dark-3);
+    display: flex;
+    align-items: center;
+
+
+    &__count{
+        margin-right: auto;
+    }
+
+    &__photo{
+        box-sizing: content-box;
+        height: 4rem;
+        width: 4rem;
+        border-radius: 50%;
+        border: 3px solid white;
+        &:not(:last-child){
+            margin-right: -1.5rem;
+        }
     }
 }

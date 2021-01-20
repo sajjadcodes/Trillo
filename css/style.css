@@ -9,7 +9,9 @@
   --color-Grey-dark-1: #333;
   --color-Grey-dark-2: #777;
   --color-Grey-dark-3: #999;
-  --box-shadow: 0 2rem 6rem rgba(0,0,0,.3); }
+  --box-shadow-dark: 0 2rem 6rem rgba(0,0,0,.3);
+  --box-shadow-light:0 2rem 5rem rgba(0,0,0,.06);
+  --line: 1px solid var(--color-Grey-light-2); }
 
 .container {
   max-width: 120rem;
@@ -21,7 +23,7 @@
 .header {
   height: 7rem;
   background-color: #fff;
-  border-bottom: var(--color-Grey-light-2);
+  border-bottom: var(--line);
   display: flex;
   justify-content: space-between;
   align-items: center; }
@@ -172,7 +174,7 @@
 .overview {
   display: flex;
   align-items: center;
-  border-bottom: 1px solid var(--color-Grey-light-1); }
+  border-bottom: var(--line); }
   .overview__heading {
     font-size: 2.25rem;
     font-weight: 300;
@@ -236,6 +238,63 @@
   100% {
     transform: scale(1);
     box-shadow: none; } }
+
+.detail {
+  display: flex;
+  padding: 4.5rem;
+  background-color: var(--color-Grey-light-1); }
+
+.description {
+  background-color: #fff;
+  box-shadow: var(--box-shadow-light);
+  padding: 3rem;
+  flex: 0 0 60%;
+  margin-right: 4.5rem; }
+
+.user-reviews {
+  background-color: seagreen;
+  flex: 1; }
+
+.paragraph:not(:nth-of-type) {
+  margin-bottom: 2rem; }
+
+.list {
+  margin: 3rem 0;
+  list-style: none;
+  padding: 3rem 0;
+  border-top: var(--line);
+  border-bottom: var(--line);
+  display: flex;
+  flex-wrap: wrap; }
+  .list__item {
+    flex: 0 0 50%;
+    margin-bottom: .7rem; }
+  .list__item::before {
+    content: "";
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    margin-right: .7rem;
+    background-color: var(--color-primary);
+    -webkit-mask-image: url(img/chevron-thin-right.svg);
+    -webkit-mask-size: cover;
+    mask-size: cover; }
+
+.recommend {
+  font-size: 1.3rem;
+  color: var(--color-Grey-dark-3);
+  display: flex;
+  align-items: center; }
+  .recommend__count {
+    margin-right: auto; }
+  .recommend__photo {
+    box-sizing: content-box;
+    height: 4rem;
+    width: 4rem;
+    border-radius: 50%;
+    border: 3px solid white; }
+    .recommend__photo:not(:last-child) {
+      margin-right: -1.5rem; }
 
 /*
 COLORS
